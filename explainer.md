@@ -38,3 +38,5 @@ The `requestAnimationFrame` handler runs just prior to the rendering update, and
 
 Because `requestPostAnimationFrame` handlers run immediately after the rendering update, before any other code, it is *guaranteed* that layout will be clean, and querying layout information will not force an additional synchronous layout. Caveat: if css properties are modified inside the `requestPostAnimationFrame` callback, then querying layout information will still force a synchronous relayout.
 
+
+Similar old proposal https://www.w3.org/Bugs/Public/show_bug.cgi?id=28644
