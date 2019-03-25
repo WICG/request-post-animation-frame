@@ -1,6 +1,6 @@
 # Window.requestPostAnimationFrame
 
-`Window.requestPostAnimationFrame` will act as a bookend to `Window.requestAnimationFrame`. Whereas `requestAnimationFrame` callbacks run just prior to the "update the rendering" step in the [HTML processing model](https://html.spec.whatwg.org/#event-loop-processing-model) (step 10.10), `requestPostAnimationFrame` callbacks will run at the end of the "update the rendering" steps.
+`Window.requestPostAnimationFrame` will act as a bookend to `Window.requestAnimationFrame`. Whereas `requestAnimationFrame` callbacks run just prior to the "update the rendering" step in the [HTML processing model](https://html.spec.whatwg.org/#event-loop-processing-model) (step 10.10), `requestPostAnimationFrame` callbacks will run immediately after "update the rendering" (step 10.13). No other tasks or microtasks are permitted to run between "update the rendering" and requestPostAnimationFrame callbacks.
 
 Broadly speaking, there are two situations where `requestPostAnimationFrame` will be useful:
 
